@@ -1,0 +1,22 @@
+{
+  "name": "runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asalga/Runner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asalga/Runner/issues"
+  },
+  "homepage": "https://github.com/asalga/Runner#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

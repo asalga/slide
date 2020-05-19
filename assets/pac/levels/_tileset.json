@@ -1,0 +1,90 @@
+{
+  "columns": 10,
+  "editorsettings":
+  {
+    "export":
+    {
+      "format": "json",
+      "target": "tileset.json"
+    }
+  },
+  "image": "tileset.png",
+  "imageheight": 320,
+  "imagewidth": 320,
+  "margin": 0,
+  "name": "tileset",
+  "spacing": 0,
+  "tilecount": 100,
+  "tiledversion": "1.3.4",
+  "tileheight": 32,
+  "tiles": [
+  {
+    "id": 0,
+    "objectgroup":
+    {
+      "draworder": "index",
+      "name": "wall",
+      "objects": [
+      {
+        "height": 32,
+        "id": 1,
+        "name": "",
+        "rotation": 0,
+        "type": "",
+        "visible": true,
+        "width": 32,
+        "x": 0,
+        "y": 0
+      }],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    "properties": [
+    {
+      "name": "test",
+      "type": "string",
+      "value": "2"
+    }],
+    "type": "block"
+  },
+  {
+    "id": 1,
+    "objectgroup":
+    {
+      "draworder": "index",
+      "name": "food",
+      "objects": [],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    "type": "food"
+  },
+  {
+    "id": 2,
+    "objectgroup":
+    {
+      "draworder": "index",
+      "name": "special",
+      "objects": [],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    "type": "special"
+  },
+  {
+    "id": 3,
+    "type": "death"
+  }],
+  "tilewidth": 32,
+  "type": "tileset",
+  "version": 1.2
+}
