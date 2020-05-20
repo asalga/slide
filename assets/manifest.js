@@ -15,7 +15,7 @@ export default {
 
   audio: [{
     name: 'coin',
-    path: 'assets/pac/audio/coin.wav'
+    path: 'assets/pac/audio/coin.mp3'
   }],
 
   animations: [{
