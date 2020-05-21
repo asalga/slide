@@ -14,9 +14,18 @@ export default {
   ],
 
   audio: [{
-    name: 'coin',
-    path: 'assets/pac/audio/coin.mp3'
-  }],
+      name: 'coin',
+      path: 'assets/pac/audio/coin.mp3'
+    },
+    {
+      name: 'switch',
+      path: 'assets/pac/audio/switch.wav'
+    },
+    {
+      name: 'explosion',
+      path: 'assets/pac/audio/explosion.wav'
+    }
+  ],
 
   animations: [{
     name: 'pac_anim',
@@ -38,7 +47,7 @@ export default {
 
   levels: [{
     name: 'level1',
-    path: 'assets/pac/levels/level2.json',
+    path: 'assets/pac/levels/level3.json',
     tilesheetRef: 'tileset'
   }]
 

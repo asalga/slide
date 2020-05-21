@@ -2,6 +2,7 @@ export default function createFunc() {
   let e = new Entity({ name: 'food' });
 
   function hit(obj) {
+    
     if (obj.other.name === 'pacslider') {
       Assets.get('coin').play();
       scene.remove(this);

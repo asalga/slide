@@ -46,4 +46,14 @@
    <property name="dummy" type="bool" value="false"/>
   </properties>
  </tile>
+ <tile id="8">
+  <properties>
+   <property name="dummy" type="bool" value="false"/>
+  </properties>
+ </tile>
+ <tile id="9">
+  <properties>
+   <property name="dummy" type="bool" value="false"/>
+  </properties>
+ </tile>
 </tileset>

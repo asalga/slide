@@ -1,6 +1,8 @@
 export default function createFunc(tileID) {
   let e = new Entity({ name: 'coinbox' });
-
+  
+  e.tags.push('wall');
+  
   e.bounds = new BoundingCircle(e.pos, 16);
   e.addComponent(new Collidable(e, { type: 1, mask: 2 }));
 

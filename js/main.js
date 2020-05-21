@@ -29,7 +29,6 @@ function ready() {
     scene.add(e);
     tileIdx++;
   }
-
 }
 
 window.preload = function() {

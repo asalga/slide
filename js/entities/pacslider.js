@@ -4,7 +4,8 @@ export default function createFunc() {
   let e = new Entity({ name: 'pacslider' });
 
   function hit(obj) {
-    if (obj.other.name === 'wall') {
+
+    if (obj.other.tags.includes('wall')) {
       if (e.vel.x > 0) {
         if (obj.other.pos.y === obj.other.pos.y) {
           e.vel.x = 0;
