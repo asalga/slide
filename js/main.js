@@ -13,26 +13,21 @@ let e, scene;
 
 function ready() {
 
-  let e = createUser();
-  e.pos.x = TileWidth;
-  e.pos.y = 3 * TileHeight;
-  scene.add(e);
-
   let level = Assets.get('level1');
   let iter = level.getEntityIterator();
 
   let tileId;
-  let idx = 0;
+  let tileIdx = 0;
 
   while ((tileId = iter.next()) !== null) {
 
-    let e = createSprite(tileId);
+    let x = tileIdx % level.data.layers[0].width;
+    let y = floor(tileIdx / level.data.layers[0].width);
 
-    let x = idx % level.data.layers[0].width;
-    let y = floor(idx / level.data.layers[0].width);
+    let e = createSprite(tileId, x, y);//, properties);
     e.pos.set(x * TileWidth, y * TileHeight);
     scene.add(e);
-    idx++;
+    tileIdx++;
   }
 
 }

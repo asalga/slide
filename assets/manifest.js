@@ -38,7 +38,7 @@ export default {
 
   levels: [{
     name: 'level1',
-    path: 'assets/pac/levels/map.json',
+    path: 'assets/pac/levels/level2.json',
     tilesheetRef: 'tileset'
   }]
 

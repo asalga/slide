@@ -2,6 +2,9 @@ import createUser from './entities/pacslider.js';
 import createNull from './entities/null.js';
 import createFood from './entities/food.js';
 import createWall from './entities/wall.js';
+import createFruit from './entities/fruit.js';
+import createCoinBox from './entities/coinbox.js';
+
 
 let m = new Map(
   [
@@ -10,7 +13,10 @@ let m = new Map(
     [2, createFood],
     
     [5, createWall],
+    [6, createFruit],
 
+    [7, createCoinBox],
+    [8, createUser]
   ]);
 
 export default function createSprite(tileID) {
@@ -23,6 +29,7 @@ export default function createSprite(tileID) {
   }
 }
 
+// use string?
 // ['null', createNull],
 // ['food', createFood],
 // ['wall', createWall],

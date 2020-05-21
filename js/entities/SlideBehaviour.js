@@ -7,7 +7,7 @@ export default class SlideBehaviour extends Component {
     super(e, 'slide');
 
     let defaults = {
-      speed: 400
+      speed: 1000
     };
     Utils.applyProps(this, defaults, cfg);
 
