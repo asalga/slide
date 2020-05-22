@@ -1,4 +1,4 @@
-import SlideBehaviour from './SlideBehaviour.js';
+import SlideBehaviour from './components/SlideBehaviour.js';
 
 export default function createFunc() {
   let e = new Entity({ name: 'pacslider' });

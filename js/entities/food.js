@@ -1,11 +1,24 @@
+import NeedsCollecting from './components/NeedsCollecting.js';
+
 export default function createFunc() {
   let e = new Entity({ name: 'food' });
 
   function hit(obj) {
-    
+
     if (obj.other.name === 'pacslider') {
+      test++;
       Assets.get('coin').play();
+
       scene.remove(this);
+
+      let evt = new Event({
+        evtName: 'collection',
+        data: { data: this }
+      });
+      evt.fire();
+
+
+
     }
   }
   e.bounds = new BoundingCircle(e.pos, 16);
@@ -25,6 +38,9 @@ export default function createFunc() {
     ctx.drawImage(tile, this.entity.pos.x, this.entity.pos.y);
   }
   e.addComponent(s);
+
+  let nc = new NeedsCollecting(e);
+  e.addComponent(nc);
 
   return e;
 }

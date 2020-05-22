@@ -51,7 +51,7 @@
    <property name="dummy" type="bool" value="false"/>
   </properties>
  </tile>
- <tile id="9">
+ <tile id="77">
   <properties>
    <property name="dummy" type="bool" value="false"/>
   </properties>

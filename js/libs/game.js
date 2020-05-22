@@ -2414,18 +2414,19 @@ class Debug$1 {
   }
 }
 
-let isOn$1 = true;
 let list = [];
 let firstTime = true;
-let checks = 0;
 let debugChecks = [];
 let _v = Vec2$1.create();
 
 class CollisionSystem {
 
+  static collisionChecks = 0;
+  static collisionTime = 0;
+  static isOn = true;
+
   static gatherCollidables() {
-    // debugger;
-    if (!isOn$1) { return; }
+    if (!CollisionSystem.isOn) { return; }
 
     // if no object were added or removed, we can avoid doing this work
     if (firstTime || scene.entitiesAddedOrRemovedDirty) {
@@ -2451,10 +2452,8 @@ class CollisionSystem {
   // circle_Circle
   // circle_AABB
   // circle_lineSegment
-
   // AABB_AABB
   // AABB_lineSegment
-
   // lineSegment_lineSegment
 
   /*
@@ -2468,14 +2467,17 @@ class CollisionSystem {
   }
 
   static setOn(b) {
-    isOn$1 = b;
+    CollisionSystem.isOn = b;
   }
 
   static checkCollisions() {
+    CollisionSystem.gatherCollidables();
+    
+    let perfTimer = new Date();
 
-    if (!isOn$1) { return; }
+    if (!CollisionSystem.isOn) { return; }
 
-    checks = 0;
+    CollisionSystem.collisionChecks = 0;
 
     if (window.debug) {
       Utils.clearArray(debugChecks);
@@ -2513,18 +2515,19 @@ class CollisionSystem {
             e.fire();
 
           }
-          checks++;
+          CollisionSystem.collisionChecks++;
         }
       }
     }
+    
+    CollisionSystem.collisionTime = ((new Date()) - perfTimer);
 
-    Debug$1.add(`Collision Checks: ${checks}`);
+    // Debug.add(`Collision Checks: ${checks}`);
     if (window.debug) {
       debugChecks.forEach(s => {
         Debug$1.add(debugChecks);
       });
     }
-
   }
 }
 // for (let i = 0; i < list.length; ++i) {
