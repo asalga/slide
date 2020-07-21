@@ -97,10 +97,18 @@ class Tileset {
   constructor(meta, img) {
     Object.assign(this, meta);
 
+    // We can use a value from the tileset to get the actual count
+    let numTiles = meta.properties.find( v => v.name === 'actuals').value;
+
+    if(!numTiles){
+      console.error('Tileset needs a property for actual tile numbers');
+    }
+
+
     this._tiles = [];
     this._tiles.push({}); // 0 is null since Tiled starts at index 1
 
-    for (let i = 0; i < this.tiles.length; i++) {
+    for (let i = 0; i < numTiles; i++) {
 
       let cvs = document.createElement('canvas');
       cvs.width = this.tilewidth;
@@ -2420,6 +2428,9 @@ let debugChecks = [];
 let _v = Vec2$1.create();
 
 class CollisionSystem {
+
+
+
 
   static collisionChecks = 0;
   static collisionTime = 0;

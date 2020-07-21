@@ -1,5 +1,8 @@
 
+$ npm run start
+or
 $ live-server
+
 
 TODO:
 	- Center level

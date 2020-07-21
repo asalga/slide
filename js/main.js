@@ -67,7 +67,7 @@ window.preload = function() {
 }
 
 window.setup = function() {
-  createCanvas(32 * 20, 32 * 15);
+  createCanvas(20 * TileWidth, 15 * TileHeight);
   Pool.init();
   Renderer.init(width, height);
   scene = new Scene(width, height);
